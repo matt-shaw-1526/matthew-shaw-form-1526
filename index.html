@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta info -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Linking stylesheet -->
+        <link rel="stylesheet" href="./css/styles.css">
+        <!-- Title -->
+        <title>Handle Form</title>
+    </head>
+    <body>
+        <!-- Giving form an id -->
+        <form id="submit">
+            <!-- Fieldset groups related form elements -->
+            <fieldset>
+                <!-- Legend tag generates caption for fieldset. Appears as a sort of title. -->
+                <legend>Form Assignment</legend>
+                <!-- Creating a grid for responsiveness -->
+                <div class = grid>
+                    <div class="box" id="nm">
+                        <label for="name">Full Name</label>
+                        <input id="name" type="text" value="">
+                    </div>
+
+                    <div class="box" id="em">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" value="">
+                    </div>
+                
+                    <div class="box" id="msg">
+                        <label for="message">Message</label>
+                        <textarea id="message" type="text" value=""></textarea>
+                    </div>
+
+                    <div class="box" id="sub">
+                        <input type="button" value="Submit" id="submit-btn">
+                    </div>
+                    <!-- Note: It is critical that div ID and input ID are different or JS cannot work. -->
+                </div>
+            </fieldset>
+        </form>
+        <!-- Linking JS -->
+        <script src="/js/index.js"></script>
+    </body>
+</html>

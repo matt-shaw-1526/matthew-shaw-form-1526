@@ -1,0 +1,151 @@
+/* This prevents side scrolling */
+html, body {
+    overflow-x: hidden;
+}
+
+/* ASSIGNMENT CRITERIA - MAX WIDTH: Setting a max width of 50rem here so that the content does not expand beyond this resolution */
+/* Set a min width of 22 rem as after this you begin to cut off white space on right hand side */
+html {
+    max-width: 50rem;
+    min-width: 22rem;
+}
+
+/* Adding some white space around the form */
+body {
+    padding: 1rem;
+}
+
+/* Adding the correct font to labels and required font size of 1rem */
+#submit label, #submit input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+/* Cleaning up spacing between submission labels and changing display view to block */
+#submit label {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+/* Cleaning up spacing between fields */
+#submit .box {
+    margin: 1.5rem 0rem 2rem 0rem;
+}
+
+/* Customizing submit button. Adding correct font and colour. Adding a slight border radius for a more rounded look. Included an animation on hover so it is more obvious when user is on button and is clicking button. */
+#submit-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    padding: 14px 40px;
+    font-size: 1rem;
+    background-color: #6495ED;
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: center;
+    float: center;
+    transition-duration: 0.4s;
+    margin-top: 3rem;
+}
+
+/* Adding hover animation and changing cursor look. */
+#submit-btn:hover {
+    background-color: #afc9f5;
+    color: black;
+    cursor: pointer;
+}
+
+/* Customizing legend. Setting font size to 2rem as per assignment criteria. Adding correcr border and colour. Gave a z index so it would appear in front of the rest of the form element. */
+legend {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    border: 2px solid #DDD;
+    padding: 1.5rem;
+    background-color: white;
+    z-index: 1;
+}
+
+/* Adding the correct colour to what is essentially the form backdrop. Z index is lower so legend pops in front. */
+fieldset {
+    background-color: #F5F5F5;
+    border: 2px solid #DDD;
+    z-index: -1;
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+/* Keeping form labels left aligned. */
+fieldset label {
+    text-align: left;
+}
+
+/* Adding a border to inputs so they pop more. */
+.box input {
+    border: 2px solid #DDD;
+}
+
+/* Adding border, correct font, and correct font size for text area. */
+textarea {
+    border: 2px solid #DDD;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+/* Adjusting name field */
+#name {
+    width: 100%;
+    height: 2rem;
+}
+
+/* Adjusting email field */
+#email {
+    width: 100%;
+    height: 2rem;
+}
+
+/* Adjusting message field */
+#message {
+    width: 100%;
+    height: 4rem;
+}
+
+/* MEDIA QUERIES */
+/* Break point set at 25rem as per assignment requirements. Anything over this limit (min width 25rem) is optimized for tablet and desktop view (40-50rem). */
+@media only screen and (min-width: 25rem) { 
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 1rem;
+    row-gap: 0;
+}
+
+/* Assigning name to correct grid column/row */
+#nm.box {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+/* Assigning email to correct grid column/row */
+#em.box {
+    grid-column: 2/6;
+    grid-row: 1;
+}
+
+/* Assigning message to correct grid column/row */
+#msg.box {
+    grid-column: 1/6;
+    grid-row: 2;
+    margin: 0;
+}
+
+/* Assigning submit button to correct grid column/row */
+#sub.box {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0;
+    width: 100%;
+}
+
+
+}
